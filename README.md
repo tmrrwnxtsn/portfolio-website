@@ -1,3 +1,3 @@
 ## Portfolio website of Pavel Kurmyza
 
-preview.png will be placed here
+Implementation of HTML documents styling using CSS
