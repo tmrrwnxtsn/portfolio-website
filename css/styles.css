@@ -10,7 +10,6 @@
     --hue-color: 355;
 
     --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -127,7 +126,7 @@ textarea {
     font-size: var(--big-font-size);
     line-height: 4rem;
     text-shadow: 0 0 2.5rem var(--text-shadow);
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-2-5);
 }
 
 .text {
@@ -247,31 +246,36 @@ textarea {
     margin-bottom: 2rem;
 }
 
-.pinned__cards li {
+/*==================== PROJECTS ====================*/
+.projects {
+    margin: 10rem 13rem 0 13rem;
+}
+
+.projects__cards li {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
-.pinned__card__img {
+.project__card__img {
     width: 27vw;
     height: auto;
     border-radius: .5rem;
     margin-right: 1rem;
 }
 
-.pinned__card__title {
+.project__card__title {
     margin-bottom: 1rem;
 }
 
-.pinned__card__subtitle {
+.project__card__subtitle {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.pinned__card__year {
+.project__card__year {
     margin-right: 1rem;
     background: var(--body-color-light);
     padding: 8px;
@@ -279,8 +283,50 @@ textarea {
     font-weight: var(--font-semi-bold);
 }
 
-.pinned__card__tag {
+.project__card__tag {
     color: var(--first-color);
+}
+
+.page {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    margin: 3rem 3rem 0 3rem;
+}
+
+.page__numbers,
+.page__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 2.6rem;
+    height: 2.6rem;
+    transition: all 400ms ease;
+}
+
+.page__dots {
+    color: var(--text-color);
+    cursor: initial;
+}
+
+.page__numbers {
+    border-radius: 0.4rem;
+}
+
+.page__numbers:hover {
+    color: var(--first-color);
+}
+
+.page__numbers.active {
+    color: var(--text-color);
+    background: var(--first-color);
+    font-weight: var(--font-semi-bold);
+    pointer-events: none;
 }
 
 /*==================== CONTACT ====================*/
