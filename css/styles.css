@@ -287,13 +287,13 @@ td, th {
     margin-bottom: var(--mb-1);
 }
 
-.project__card__subtitle {
+.project__subtitle {
     display: flex;
     align-items: center;
     margin-bottom: var(--mb-1-5);
 }
 
-.project__card__year {
+.project__year {
     margin-right: 1rem;
     background: var(--body-color-light);
     padding: 8px;
@@ -301,7 +301,7 @@ td, th {
     font-weight: var(--font-semi-bold);
 }
 
-.project__card__tag {
+.project__tag {
     color: var(--first-color);
 }
 
@@ -357,6 +357,23 @@ td, th {
     grid-row-gap: .9rem;
     flex-direction: column;
     margin-bottom: var(--mb-2);
+}
+
+/*==================== PROJECT ====================*/
+.project {
+    margin: 10rem 13rem 0 13rem;
+}
+
+.project__title {
+    margin-bottom: var(--mb-1);
+}
+
+.project__img {
+    margin-bottom: var(--mb-2-5);
+}
+
+.project__img figcaption {
+    text-align: center;
 }
 
 /*==================== FOOTER ====================*/
