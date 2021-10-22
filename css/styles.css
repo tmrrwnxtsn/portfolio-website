@@ -151,6 +151,14 @@ td, th {
     width: calc(100% / 1.5);
 }
 
+.detailed__link {
+    color: var(--first-color);
+}
+
+.detailed__link:hover {
+    color: var(--first-color-alt);
+}
+
 /*==================== HEADER ====================*/
 .navbar {
     display: flex;
@@ -243,6 +251,7 @@ td, th {
 
 .recent__card__description {
     margin-top: 2rem;
+    margin-bottom: var(--mb-1);
 }
 
 .recent__link {
@@ -277,8 +286,8 @@ td, th {
 }
 
 .project__card__img {
+    align-self: center;
     width: 27vw;
-    height: auto;
     border-radius: .5rem;
     margin-right: 1rem;
 }
@@ -299,6 +308,10 @@ td, th {
     padding: 8px;
     border-radius: 50px;
     font-weight: var(--font-semi-bold);
+}
+
+.project__description {
+    margin-bottom: var(--mb-1-5);
 }
 
 .project__tag {
