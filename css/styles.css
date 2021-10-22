@@ -11,9 +11,6 @@
 
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
 
     --text-color: #ECF8FF;
     --text-shadow: rgba(188, 251, 195, 0.3);
@@ -25,7 +22,8 @@
     /*========== Font and typography ==========*/
     --body-font: 'Jost', sans-serif;
 
-    --big-font-size: 3rem;
+    --title-font-size: 3rem;
+    --subtitle-font-size: 2rem;
     --normal-font-size: 1.5rem;
     --small-font-size: 1rem;
 
@@ -33,9 +31,6 @@
     --font-semi-bold: 700;
 
     /*========== Margenes Bottom ==========*/
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
     --mb-1: 1rem;
     --mb-1-5: 1.5rem;
     --mb-2: 2rem;
@@ -115,6 +110,18 @@ textarea {
     resize: none;
 }
 
+table {
+    width: 100%;
+    background-color: var(--body-color-light);
+    margin-bottom: var(--mb-3);
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
 /*==================== REUSABLE ====================*/
 .container {
@@ -123,14 +130,25 @@ textarea {
 }
 
 .title {
-    font-size: var(--big-font-size);
+    font-size: var(--title-font-size);
     line-height: 4rem;
     text-shadow: 0 0 2.5rem var(--text-shadow);
     margin-bottom: var(--mb-2-5);
 }
 
+.subtitle {
+    font-size: var(--subtitle-font-size);
+    margin-bottom: var(--mb-2);
+}
+
 .text {
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-2-5);
+}
+
+.align__half {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% / 1.5);
 }
 
 /*==================== HEADER ====================*/
@@ -243,7 +261,7 @@ textarea {
 }
 
 .pinned__title {
-    margin-bottom: 2rem;
+    margin-bottom: var(--mb-2);
 }
 
 /*==================== PROJECTS ====================*/
@@ -255,7 +273,7 @@ textarea {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: var(--mb-2);
 }
 
 .project__card__img {
@@ -266,13 +284,13 @@ textarea {
 }
 
 .project__card__title {
-    margin-bottom: 1rem;
+    margin-bottom: var(--mb-1);
 }
 
 .project__card__subtitle {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--mb-1-5);
 }
 
 .project__card__year {
@@ -338,7 +356,7 @@ textarea {
     display: grid;
     grid-row-gap: .9rem;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: var(--mb-2);
 }
 
 /*==================== FOOTER ====================*/
@@ -377,6 +395,25 @@ textarea {
     color: var(--text-color-shadow);
 }
 
+/*==================== ABOUT ====================*/
+.about {
+    margin: 10rem 13rem 0 13rem;
+}
+
+/*==================== COOPERATION ====================*/
+.cooperation {
+    margin: 0 13rem 0 13rem;
+    text-align: center;
+}
+
+.cooperation__title {
+    font-size: var(--title-font-size);
+    color: limegreen;
+    text-shadow: 0 0 2.5rem darkgreen;
+    margin-bottom: var(--mb-2-5);
+    align-self: center;
+}
+
 /*==================== BUTTONS ====================*/
 .button {
     display: inline-block;
@@ -388,8 +425,16 @@ textarea {
     transition: all 400ms ease;
 }
 
+.button.positive {
+    background-color: forestgreen;
+}
+
 .button:hover {
     background-color: var(--first-color-alt);
+}
+
+.button.positive:hover {
+    background-color: green;
 }
 
 .button--flex {
