@@ -159,6 +159,11 @@ td, th {
     color: var(--first-color-alt);
 }
 
+.separator {
+    margin: 1rem 0;
+    border-top: 1px solid var(--text-color);
+}
+
 /*==================== HEADER ====================*/
 .navbar {
     display: flex;
