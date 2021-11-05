@@ -11,7 +11,9 @@ form.addEventListener("formdata", event => {
     const data = event.formData;
     const values = [...data.values()];
 
-    let name = values[0], email = values[1];
+    let name = values[0], email = values[1], message = values[2];
+
+    console.log(`Имя: ${name}\nEmail: ${email}\nСообщение: ${message}`)
 
     // name validation
     const REGEXP_ONLY_SYMBOLS = /^[a-zа-яё-]+$/i
