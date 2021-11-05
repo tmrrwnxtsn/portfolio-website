@@ -5,6 +5,9 @@
     <title>Павел Курмыза | Связаться</title>
     <!--==================== CSS ====================-->
     <link href="css/styles.css" rel="stylesheet">
+    <!--================ SWEETALERT 2 ===============-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </head>
 <body>
 <!--==================== HEADER ====================-->
@@ -31,18 +34,18 @@
             <form>
                 <div class="form__input">
                     <label for="inputName">Ваше имя</label>
-                    <input type="text" id="inputName" name="inputName">
+                    <input type="text" id="inputName" name="name">
                 </div>
                 <div class="form__input">
                     <label for="inputEmail">Ваш email</label>
-                    <input type="email" id="inputEmail" aria-describedby="emailHelp" name="inputEmail">
+                    <input type="email" id="inputEmail" aria-describedby="emailHelp" name="email">
                     <small id="emailHelp">Email не будет передан третьим лицам</small>
                 </div>
                 <div class="form__input">
                     <label for="inputMessage">Сообщение</label>
-                    <textarea id="inputMessage" rows="4" name="inputMessage"></textarea>
+                    <textarea id="inputMessage" rows="4" name="message"></textarea>
                 </div>
-                <a type="submit" href="#" class="button">Отправить</a>
+                <button type="submit">Отправить</button>
             </form>
         </section>
     </div>
@@ -59,5 +62,7 @@
         <div class="footer__description">Сайт разработан Курмыза Павлом ©2021</div>
     </div>
 </footer>
+<!--==================== SITE JS ====================-->
+<script src="js/site.js"></script>
 </body>
 </html>
