@@ -1,13 +1,12 @@
-import React from 'react';
+import React, {ButtonHTMLAttributes, DetailedHTMLProps} from 'react';
 
-interface ButtonProps {
+interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     text: string;
-    onClick: () => any;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({text, ...props}: ButtonProps) => {
     return (
-        <button onClick={props.onClick}>{props.text}</button>
+        <button {...props}>{text}</button>
     );
 };
 
