@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Counter from "./Counter";
 
 function App() {
-    const [stepCounter, setStepCounter] = useState(0)
-
     return (
         <div className="App">
-            <Counter start={0} step={1} onChange={setStepCounter}/>
-            <Counter start={0} step={stepCounter}/>
+            <header className="App-header">
+                <p>
+                    Edit <code>src/App.tsx</code> and save to reload.
+                </p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Learn React
+                </a>
+            </header>
         </div>
     );
 }
