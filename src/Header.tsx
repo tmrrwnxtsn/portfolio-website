@@ -1,32 +1,20 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-export default function Header() {
+interface HeaderProps {
+    user: string;
+}
+
+export default function Header({user}: HeaderProps) {
     return (
-        <AppBar position='relative' color='inherit'
+        <AppBar position='relative'
                 sx={{borderBottom: (theme) => `1px solid ${theme.palette.divider}`}}>
             <Toolbar sx={{flexWrap: 'wrap'}}>
-                <Typography variant='h6' color='inherit' noWrap sx={{flexGrow: 1}}>
-                    Павел Курмыза | Backend-разработчик
+                <Typography variant='h6' color='default' noWrap sx={{flexGrow: 1}}>
+                    Репозитории пользователя: {user}
                 </Typography>
-                <nav>
-                    <Link variant='button' color='text.primary' href='#' sx={{my: 1, mx: 1.5}}>
-                        Главная
-                    </Link>
-                    <Link variant='button' color='text.primary' href='#' sx={{my: 1, mx: 1.5}}>
-                        Проекты
-                    </Link>
-                    <Link variant='button' color='text.primary' href='#' sx={{my: 1, mx: 1.5}}>
-                        Обо мне
-                    </Link>
-                </nav>
-                <Button href='#' variant='outlined' sx={{my: 1, mx: 1.5}}>
-                    Связаться
-                </Button>
             </Toolbar>
         </AppBar>
     );
