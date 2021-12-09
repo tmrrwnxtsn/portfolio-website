@@ -25,7 +25,7 @@ export default function Footer() {
             <Box component='footer' sx={{pt: 4, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Stack direction="row" spacing={3}>
                     {footerData.social.map((socialElem) => (
-                        <Link display="block" href={socialElem.url}>
+                        <Link key={socialElem.url} display="block" href={socialElem.url}>
                             <socialElem.icon/>
                         </Link>
                     ))}

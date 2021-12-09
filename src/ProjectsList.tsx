@@ -8,7 +8,7 @@ export default function ProjectsList({projectCards}: ProjectListProps) {
     return (
         <Stack divider={<Divider orientation='horizontal' flexItem/>} spacing={4}>
             {projectCards.map((projectCard) => (
-                <ProjectCard image={projectCard.image} imageLabel={projectCard.imageLabel}
+                <ProjectCard key={projectCard.title} image={projectCard.image} imageLabel={projectCard.imageLabel}
                              title={projectCard.title} date={projectCard.date} tag={projectCard.tag}
                              description={projectCard.description} url={projectCard.url}/>
             ))}
